@@ -14,4 +14,5 @@ open index.html # or double-click in your file explorer
 
 - Update contact info in `index.html` under the **Contact** section and hero panel CTA links.
 - Replace color variables and typography in `styles.css` to match your brand.
+- Update swatch patterns in `styles.css` (`.swatch__tile--*`) to match your favorite materials.
 - Swap gallery tiles with real project photos by setting `background-image` on `.gallery__item` classes.
