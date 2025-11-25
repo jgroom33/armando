@@ -24,7 +24,7 @@
       <a href="#process">Process</a>
       <a href="#projects">Lookbook</a>
       <a href="#contact">Contact</a>
-      <a class="btn btn-ghost" href="#contact">Get an estimate</a>
+      <a class="btn btn-ghost" href="mailto:armando@example.com?subject=Tile%20Project%20Estimate&body=Project%20location:%0ASquare%20footage:%0AMaterial%20type:%0ADesired%20timeline:%0ANotes:">Get an estimate</a>
     </nav>
   </header>
 
@@ -41,7 +41,7 @@
           <span class="pill">Steam-ready showers</span>
         </div>
         <div class="hero__actions">
-          <a class="btn btn-primary" href="#contact">Schedule a walkthrough</a>
+          <a class="btn btn-primary" href="mailto:armando@example.com?subject=On-site%20walkthrough&body=Project%20location:%0ASquare%20footage:%0AMaterial%20type:%0ATimeline:%0ANotes:">Schedule a walkthrough</a>
           <a class="btn btn-outline" href="#projects">View finished work</a>
         </div>
         <div class="hero__stats">
@@ -243,20 +243,20 @@
       <div class="section__header">
         <p class="eyebrow">Contact</p>
         <h2>Ready to install? Let’s lock your dates.</h2>
-        <p class="section__lead">Share square footage, materials, and timelines. We respond within one business day with next steps.</p>
+        <p class="section__lead">Share square footage, materials, and timelines. We respond within one business day—call, text, or email. No forms.</p>
       </div>
       <div class="contact">
         <div class="contact__card">
           <div class="contact__label">Call or text</div>
-          <a class="contact__value" href="tel:+17135550123">(713) 555-0123</a>
+          <a class="contact__value" href="tel:+13039991814">(303) 999-1814</a>
           <div class="contact__label">Email</div>
           <a class="contact__value" href="mailto:armando@example.com">armando@example.com</a>
           <div class="contact__label">Service areas</div>
-          <p class="contact__value">Greater Houston, The Woodlands, and statewide commercial travel.</p>
+          <p class="contact__value">Durango, CO and surrounding Four Corners region.</p>
         </div>
         <div class="contact__card contact__card--outline">
           <div class="contact__label">Preferred start date</div>
-          <div class="contact__value">Currently scheduling Dec 4 – Jan 12</div>
+          <div class="contact__value" id="scheduling-window">Currently scheduling 3 weeks out</div>
           <div class="contact__label">What to prepare</div>
           <ul class="contact__list">
             <li>Square footage and material type</li>
@@ -284,5 +284,19 @@
     </div>
     <div class="footer__legal">© 2024 Armando Tile &amp; Stone. Built for GitHub Pages.</div>
   </footer>
+  <script>
+    // Dynamically set scheduling window to always be roughly 3-5 weeks from today
+    (() => {
+      const el = document.getElementById('scheduling-window');
+      if (!el) return;
+      const months = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'];
+      const start = new Date();
+      start.setDate(start.getDate() + 21); // 3 weeks out
+      const end = new Date(start);
+      end.setDate(end.getDate() + 14); // two-week window
+      const fmt = (d) => `${months[d.getMonth()]} ${d.getDate()}`;
+      el.textContent = `Currently scheduling ${fmt(start)} – ${fmt(end)}`;
+    })();
+  </script>
 </body>
 </html>
