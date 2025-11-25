@@ -8,12 +8,7 @@ Static marketing site for a tile installation company. No build step required—
 open index.html # or double-click in your file explorer
 ```
 
-## Deploy to GitHub Pages
-
-1. Commit these files to your GitHub repository (e.g., `main` branch).
-2. In GitHub, go to **Settings → Pages**.
-3. Under **Build and deployment**, choose **Deploy from a branch**. Select your branch (e.g., `main`) and folder `/**root**` (not `/docs`), then save.
-4. GitHub will publish to `https://<your-username>.github.io/<repo-name>/` within a minute.
+`https://jgroom33.github.io/armando/`
 
 ## Customize
 
